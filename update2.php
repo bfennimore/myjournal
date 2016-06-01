@@ -5,7 +5,7 @@ if ($_POST["j_entry"]) {
 } else {
         echo "I do not got it.";
 }
-$logentry = $_POST["j_entry"];
+$logentry = addslashes($_POST["j_entry"]);
 $date_entry = date("Y-m-d G:i:s");
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
